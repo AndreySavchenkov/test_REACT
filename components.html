@@ -14,18 +14,18 @@
 
         class HelloWorld extends React.Component {
             render() {
-                return <p>Привет, мир!</p>
+                return <p>Привет, {this.props.greetTarget}!</p>
             }
         }
 
         ReactDOM.render(
             <div>
-            <HelloWorld/>
-            <HelloWorld/>
-            <HelloWorld/>
-            <HelloWorld/>
-            <HelloWorld/>
-            <HelloWorld/>
+                <HelloWorld greetTarget="Бэтмен"/>
+                <HelloWorld greetTarget="Терминатор"/>
+                <HelloWorld greetTarget="Николас Кейдж"/>
+                <HelloWorld greetTarget="Нео"/>
+                <HelloWorld greetTarget="Боня"/>
+                <HelloWorld greetTarget="Женщина-кошка"/>
             </div>,
             document.querySelector("#container")
         );
